@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" manifest="cache.appcache">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>zKuvix</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  html, body { min-height: 100%; margin: 0; }
+  body {
+    background-color: #090d12;
+    background-image: linear-gradient(rgba(5, 8, 18, .43), rgba(5, 8, 18, .52)), url("background.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #e5edf2;
+    font: 15px/1.5 "Segoe UI", system-ui, sans-serif;
+  }
+  #brand {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    padding: 12px 18px;
+    background: rgba(8, 13, 18, .72);
+    border-bottom: 1px solid rgba(113, 225, 210, .16);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .18);
+  }
+  #brand img { width: 40px; height: 40px; border-radius: 10px; }
+  #brand b { color: #f0f7f7; font-size: 15px; letter-spacing: .18em; }
+  #wrap {
+    width: calc(100% - 36px);
+    max-width: 560px;
+    margin: 12vh auto 0;
+    padding: 30px 32px;
+    background: linear-gradient(145deg, rgba(20, 31, 40, .96), rgba(13, 20, 27, .96));
+    border: 1px solid #253943;
+    border-radius: 16px;
+    box-shadow: 0 22px 70px rgba(0, 0, 0, .38), inset 0 1px rgba(255, 255, 255, .035);
+  }
+  #state { margin: 0 0 8px; color: #e8f3f4; font-size: 22px; font-weight: 700; line-height: 1.25; text-align: center; white-space: pre-line; }
+  #det { margin: 0 0 8px; color: #9aabb5; font-size: 14px; text-align: center; }
+  #det b { color: #d8e6e8; font-weight: 600; }
+  #cache { min-height: 18px; margin: 16px 0 0; padding-top: 12px; border-top: 1px solid #24333a; color: #82939d; font-size: 12px; }
+  #cache.cacheok { color: #79d8b3; }
+  .ok, .safe { color: #79d8b3; }
+  .bad, .danger { color: #ff8f8b; }
+  .warn { color: #f1c879; }
+  @media (max-width: 520px) {
+    #wrap { margin-top: 8vh; padding: 24px 21px; }
+    #state { font-size: 20px; }
+  }
+</style>
+</head>
+<body>
+<div id="brand"><img src="logo_zkuvix.png" alt="" width="28" height="28"><b>Web-Host Exploit By zKuvix</b></div>
+<div id="wrap">
+  <div id="state">detecting firmware...</div>
+  <div id="det"></div>
+  <div id="cache"></div>
+</div>
+
+<script>
+(function () {
+    var stateEl = document.getElementById("state");
+    var detEl = document.getElementById("det");
+    var cacheEl = document.getElementById("cache");
+    function setState(t, c) { stateEl.textContent = t; stateEl.className = c || ""; }
+    function setCache(t, ok) { cacheEl.textContent = t; cacheEl.className = ok ? "cacheok" : ""; }
+    var params = new URLSearchParams(location.search);
+
+    // Firmwares this build has a MEASURED kernel table for. jb.js still runs its
+    // own kernel-table-present gate, so this is UX only -- an unlisted firmware
+    // can still be launched with a tap. KEEP IN SYNC with ps4_offsets.js: add a
+    // fwnum here in the SAME commit that fills that firmware's kernel RVAs.
+    // The PS4 reports its minor as two hex digits in the UA (13.52 -> minor 0x52).
+    var SUPPORTED = { 1302: 1, 1304: 1, 1350: 1, 1352: 1 }; // all measured on hardware
+
+    var key = null, fwnum = null;
+    var m = /PlayStation\s+4[\/ ](\d+)\.(\d+)/.exec(navigator.userAgent);
+    if (m) {
+        var ms = parseInt(m[2], 16).toString(16);
+        if (ms.length < 2) ms = "0" + ms;
+        key = m[1] + "." + ms;
+        fwnum = parseInt(m[1], 10) * 100 + parseInt(ms, 10);
+    }
+
+    var forced = params.get("force") === "1";
+    var supported = forced || (fwnum !== null && SUPPORTED[fwnum] === 1);
+    detEl.innerHTML = "firmware <b>" + (key || "unknown") + "</b>"
+        + (supported ? " &middot; <b>supported</b>"
+                     : " &middot; not in this build's kernel table");
+
+    var target = "jb.html" + location.search;
+    function go() { setState("loading jailbreak...", "warn"); location.replace(target); }
+
+    function waitForTap(msg, action) {
+        setState(msg, "warn");
+        function fire() {
+            window.removeEventListener("click", fire);
+            window.removeEventListener("keydown", fire);
+            action();
+        }
+        window.addEventListener("click", fire);
+        window.addEventListener("keydown", fire);
+    }
+
+    // Off-target consoles are not launched automatically -- one tap still runs
+    // it, so a user-agent quirk on the real 13.52 console can never lock it out.
+    if (!supported) {
+        setState("UNSUPPORTED FIRMWARE", "bad");
+        waitForTap("UNSUPPORTED (" + (key || "unknown") + ")\nPress X to run anyway", go);
+        return;
+    }
+
+    var ac = window.applicationCache;
+    if (!ac || !document.documentElement.hasAttribute("manifest")) {
+        go();
+    } else if (!navigator.onLine) {
+        setCache("offline -- from cache", true);
+        go();
+    } else if (ac.status === ac.IDLE) {
+        setCache("cached", true);
+        go();
+    } else if (ac.status === ac.UPDATEREADY) {
+        try { ac.swapCache(); } catch (e) {}
+        setCache("update downloaded", true);
+        waitForTap("GoldHEN READY\nPress X To Reloade & Run",
+                   function () { location.reload(); });
+    } else {
+        setCache("checking cache...");
+        ac.addEventListener("downloading",
+            function () { setCache("caching for offline (first run)..."); }, false);
+        ac.addEventListener("progress", function (e) {
+            if (e && e.total)
+                setCache("caching " + Math.round((e.loaded / e.total) * 100) + "%");
+        }, false);
+        ac.addEventListener("cached", function () {
+            setCache("cached for offline use", true);
+            waitForTap("CACHED (first run) -- press X or tap to run", go);
+        }, false);
+        ac.addEventListener("updateready", function () {
+            try { ac.swapCache(); } catch (e) {}
+            setCache("update downloaded", true);
+            waitForTap("GoldHEN READY\nPress X To Reloade & Run",
+                       function () { location.reload(); });
+        }, false);
+        ac.addEventListener("noupdate", function () {
+            setCache("cached -- offline ready", true);
+            go();
+        }, false);
+        ac.addEventListener("error", function () {
+            setCache("cache unavailable");
+            waitForTap("CACHE FAILED -- press X or tap to run anyway", go);
+        }, false);
+        ac.addEventListener("obsolete", function () {
+            setCache("cache obsolete");
+            waitForTap("CACHE OBSOLETE -- press X or tap to run", go);
+        }, false);
+    }
+})();
+</script>
+</body>
+</html>

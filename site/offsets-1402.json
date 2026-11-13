@@ -1,0 +1,1097 @@
+{
+  "meta": {
+    "firmware": "14.02",
+    "reference_file": "1402.c",
+    "known_elf_sha256": "a1522676dabb9cb51a1f94ebced0e725b1d605202a87f6c07aad2625c169a704",
+    "known_elf_bytes": 28468720,
+    "known_elf_base": "0xffffffff96810000",
+    "notes": "Reference values are not live-validated. 38 signatures were matched to one supplied kernel ELF by an earlier offline audit. New file matches are separately evaluated by the scanner. Module-relative entries cannot be validated against the kernel ELF."
+  },
+  "entries": [
+    {
+      "name": "XFAST_SYSCALL_addr",
+      "rva": "0x1C0",
+      "category": "data",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false,
+      "signature": "0F01F86548892425",
+      "sigSource": "SDK function guard"
+    },
+    {
+      "name": "PRISON0_addr",
+      "rva": "0x111FA18",
+      "category": "data",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "ROOTVNODE_addr",
+      "rva": "0x2136E90",
+      "category": "data",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "M_TEMP_addr",
+      "rva": "0x1520D00",
+      "category": "data",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "MINI_SYSCORE_SELF_BINARY_addr",
+      "rva": "0x153D6C8",
+      "category": "data",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "ALLPROC_addr",
+      "rva": "0x1B28538",
+      "category": "data",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "SBL_DRIVER_MAPPED_PAGES_addr",
+      "rva": "0x2647350",
+      "category": "data",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "SBL_PFS_SX_addr",
+      "rva": "0x265C080",
+      "category": "data",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "SBL_KEYMGR_KEY_SLOTS_addr",
+      "rva": "0x2668040",
+      "category": "data",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "SBL_KEYMGR_KEY_RBTREE_addr",
+      "rva": "0x2668050",
+      "category": "data",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "SBL_KEYMGR_BUF_VA_addr",
+      "rva": "0x266C000",
+      "category": "data",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "SBL_KEYMGR_BUF_GVA_addr",
+      "rva": "0x266C808",
+      "category": "data",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "FPU_CTX_addr",
+      "rva": "0x26542C0",
+      "category": "data",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "SYSENT_addr",
+      "rva": "0x1102B70",
+      "category": "data",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "memcmp_addr",
+      "rva": "0x3950F0",
+      "category": "common",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false,
+      "signature": "554889E54885D274",
+      "sigSource": "SDK function guard"
+    },
+    {
+      "name": "_sx_xlock_addr",
+      "rva": "0xA3840",
+      "category": "common",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "_sx_xunlock_addr",
+      "rva": "0xA3A00",
+      "category": "common",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "malloc_addr",
+      "rva": "0x9520",
+      "category": "common",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false,
+      "signature": "554889E541574156",
+      "sigSource": "SDK function guard"
+    },
+    {
+      "name": "free_addr",
+      "rva": "0x96E0",
+      "category": "common",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false,
+      "signature": "554889E541574156",
+      "sigSource": "SDK function guard"
+    },
+    {
+      "name": "strstr_addr",
+      "rva": "0x21D420",
+      "category": "common",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "fpu_kern_enter_addr",
+      "rva": "0x1E0620",
+      "category": "common",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "fpu_kern_leave_addr",
+      "rva": "0x1E06E0",
+      "category": "common",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "memcpy_addr",
+      "rva": "0x2BDB50",
+      "category": "common",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false,
+      "signature": "554889E54989FA49",
+      "sigSource": "SDK function guard"
+    },
+    {
+      "name": "memset_addr",
+      "rva": "0x1FA900",
+      "category": "common",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false,
+      "signature": "554889E553504889",
+      "sigSource": "SDK function guard"
+    },
+    {
+      "name": "strlen_addr",
+      "rva": "0x36B910",
+      "category": "common",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false,
+      "signature": "554889E5488D47FF",
+      "sigSource": "SDK function guard"
+    },
+    {
+      "name": "printf_addr",
+      "rva": "0x2E0B20",
+      "category": "common",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false,
+      "signature": "554889E5534883EC",
+      "sigSource": "SDK function guard"
+    },
+    {
+      "name": "eventhandler_register_addr",
+      "rva": "0x224920",
+      "category": "common",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceSblACMgrGetPathId_addr",
+      "rva": "0x3B3C50",
+      "category": "Fself",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceSblServiceMailbox_addr",
+      "rva": "0x630970",
+      "category": "Fself",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceSblAuthMgrSmIsLoadable2_addr",
+      "rva": "0x63D7E0",
+      "category": "Fself",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "_sceSblAuthMgrGetSelfInfo_addr",
+      "rva": "0x63E020",
+      "category": "Fself",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "_sceSblAuthMgrSmStart_addr",
+      "rva": "0x63EBB0",
+      "category": "Fself",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceSblAuthMgrVerifyHeader_addr",
+      "rva": "0x63D840",
+      "category": "Fself",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "RsaesPkcs1v15Dec2048CRT_addr",
+      "rva": "0x21C3D0",
+      "category": "Fpkg",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "Sha256Hmac_addr",
+      "rva": "0x1F9500",
+      "category": "Fpkg",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "AesCbcCfb128Encrypt_addr",
+      "rva": "0x341C10",
+      "category": "Fpkg",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "AesCbcCfb128Decrypt_addr",
+      "rva": "0x341E40",
+      "category": "Fpkg",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceSblDriverSendMsg_0_addr",
+      "rva": "0x61CFB0",
+      "category": "Fpkg",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceSblPfsSetKeys_addr",
+      "rva": "0x6276F0",
+      "category": "Fpkg",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceSblKeymgrSetKeyStorage_addr",
+      "rva": "0x625750",
+      "category": "Fpkg",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceSblKeymgrSetKeyForPfs_addr",
+      "rva": "0x62C040",
+      "category": "Fpkg",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceSblKeymgrCleartKey_addr",
+      "rva": "0x62C380",
+      "category": "Fpkg",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceSblKeymgrSmCallfunc_addr",
+      "rva": "0x62BC10",
+      "category": "Fpkg",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "vmspace_acquire_ref_addr",
+      "rva": "0x2F7CF0",
+      "category": "Patch",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "vmspace_free_addr",
+      "rva": "0x2F7B20",
+      "category": "Patch",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "vm_map_lock_read_addr",
+      "rva": "0x2F7E80",
+      "category": "Patch",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false,
+      "signature": "554889E580BF1A01",
+      "sigSource": "SDK function guard"
+    },
+    {
+      "name": "vm_map_unlock_read_addr",
+      "rva": "0x2F7ED0",
+      "category": "Patch",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false,
+      "signature": "554889E541565380",
+      "sigSource": "SDK function guard"
+    },
+    {
+      "name": "vm_map_lookup_entry_addr",
+      "rva": "0x2F84C0",
+      "category": "Patch",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false,
+      "signature": "554889E541574156",
+      "sigSource": "SDK function guard"
+    },
+    {
+      "name": "proc_rwmem_addr",
+      "rva": "0x366D80",
+      "category": "Patch",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false,
+      "signature": "554889E541574156",
+      "sigSource": "SDK function guard"
+    },
+    {
+      "name": "sceSblAuthMgrIsLoadable__sceSblACMgrGetPathId_hook",
+      "rva": "0x642FFC",
+      "category": "Fself hooks",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceSblAuthMgrIsLoadable2_hook",
+      "rva": "0x64314E",
+      "category": "Fself hooks",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceSblAuthMgrVerifyHeader_hook1",
+      "rva": "0x6438E6",
+      "category": "Fself hooks",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceSblAuthMgrVerifyHeader_hook2",
+      "rva": "0x6445C9",
+      "category": "Fself hooks",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceSblAuthMgrSmLoadSelfSegment__sceSblServiceMailbox_hook",
+      "rva": "0x640FFD",
+      "category": "Fself hooks",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceSblAuthMgrSmLoadSelfBlock__sceSblServiceMailbox_hook",
+      "rva": "0x641C38",
+      "category": "Fself hooks",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceSblKeymgrSetKeyStorage__sceSblDriverSendMsg_hook",
+      "rva": "0x6257F5",
+      "category": "Fpkg hooks",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceSblKeymgrInvalidateKey__sx_xlock_hook",
+      "rva": "0x62D1FD",
+      "category": "Fpkg hooks",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceSblKeymgrSmCallfunc_npdrm_decrypt_isolated_rif_hook",
+      "rva": "0x64D550",
+      "category": "Fpkg hooks",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceSblKeymgrSmCallfunc_npdrm_decrypt_rif_new_hook",
+      "rva": "0x64E31E",
+      "category": "Fpkg hooks",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "mountpfs__sceSblPfsSetKeys_hook1",
+      "rva": "0x6A3E79",
+      "category": "Fpkg hooks",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "mountpfs__sceSblPfsSetKeys_hook2",
+      "rva": "0x6A40AA",
+      "category": "Fpkg hooks",
+      "scope": "kernel",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceSblRcMgrIsAllowDebugMenuForSettings_patch",
+      "rva": "0x1D100",
+      "category": "SceShellUI patches - debug patches - libkernel_sys.sprx",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceSblRcMgrIsStoreMode_patch",
+      "rva": "0x1D460",
+      "category": "SceShellUI patches - debug patches - libkernel_sys.sprx",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "CreateUserForIDU_patch",
+      "rva": "0x18B3B0",
+      "category": "SceShellUI patches - remote play patches",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "remote_play_menu_patch",
+      "rva": "0xEC8BE2",
+      "category": "SceShellUI patches - remote play patches",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "SceRemotePlay_patch1",
+      "rva": "0xED1F5",
+      "category": "SceRemotePlay patches - remote play patches - system\\vsh\\app\\NPXS21006",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "SceRemotePlay_patch2",
+      "rva": "0xED210",
+      "category": "SceRemotePlay patches - remote play patches - system\\vsh\\app\\NPXS21006",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceKernelIsGenuineCEX_patch1",
+      "rva": "0x16F5A4",
+      "category": "SceShellCore patches - call sceKernelIsGenuineCEX",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceKernelIsGenuineCEX_patch2",
+      "rva": "0x874C14",
+      "category": "SceShellCore patches - call sceKernelIsGenuineCEX",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceKernelIsGenuineCEX_patch3",
+      "rva": "0x8C4F32",
+      "category": "SceShellCore patches - call sceKernelIsGenuineCEX",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "sceKernelIsGenuineCEX_patch4",
+      "rva": "0xA287E4",
+      "category": "SceShellCore patches - call sceKernelIsGenuineCEX",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "nidf_libSceDipsw_patch1",
+      "rva": "0x16F5D2",
+      "category": "SceShellCore patches - call nidf_libSceDipsw",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "nidf_libSceDipsw_patch2",
+      "rva": "0x24E11C",
+      "category": "SceShellCore patches - call nidf_libSceDipsw",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "nidf_libSceDipsw_patch3",
+      "rva": "0x874C42",
+      "category": "SceShellCore patches - call nidf_libSceDipsw",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "nidf_libSceDipsw_patch4",
+      "rva": "0xA28812",
+      "category": "SceShellCore patches - call nidf_libSceDipsw",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "check_disc_root_param_patch",
+      "rva": "0xDEADC0DE",
+      "category": "SceShellCore patches - bypass firmware checks",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": true
+    },
+    {
+      "name": "app_installer_patch",
+      "rva": "0x1389A0",
+      "category": "SceShellCore patches - bypass firmware checks",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "check_system_version",
+      "rva": "0x3CA3A7",
+      "category": "SceShellCore patches - bypass firmware checks",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "check_title_system_update_patch",
+      "rva": "0x3CD5F0",
+      "category": "SceShellCore patches - bypass firmware checks",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "enable_data_mount_patch",
+      "rva": "0x323380",
+      "category": "SceShellCore patches - enable remote pkg installer",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "enable_psvr_patch",
+      "rva": "0xDAFB80",
+      "category": "SceShellCore patches - enable VR without spoof",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "enable_fpkg_patch",
+      "rva": "0x3DE07F",
+      "category": "SceShellCore patches - enable fpkg",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "fake_free_patch",
+      "rva": "0xFD13F9",
+      "category": "SceShellCore patches - use `free` prefix instead `fake`",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "pkg_installer_patch",
+      "rva": "0xA11D31",
+      "category": "SceShellCore patches - enable official external HDD support",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "ext_hdd_patch",
+      "rva": "0x61465D",
+      "category": "SceShellCore patches - enable official external HDD support",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "debug_trophies_patch",
+      "rva": "0x74D5E9",
+      "category": "SceShellCore patches - enable debug trophies",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "disable_screenshot_patch",
+      "rva": "0xD2216",
+      "category": "SceShellCore patches - disable screenshot block",
+      "scope": "module",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "proc_p_comm_offset",
+      "rva": "0x454",
+      "category": "Process structure offsets",
+      "scope": "structure",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "proc_path_offset",
+      "rva": "0x474",
+      "category": "Process structure offsets",
+      "scope": "structure",
+      "source": "Uploaded 1402.c HEN reference",
+      "confidence": "reference-only",
+      "placeholder": false
+    },
+    {
+      "name": "kmem_alloc",
+      "rva": "0x466920",
+      "category": "SDK function guard",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "554889E541574156",
+      "sigSource": "SDK function guard",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "create_thread",
+      "rva": "0x4C6C0",
+      "category": "SDK function guard",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "554889E541574156",
+      "sigSource": "SDK function guard",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "kern_reboot",
+      "rva": "0x3A2BC0",
+      "category": "SDK function guard",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "554889E541574156",
+      "sigSource": "SDK function guard",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "vm_map_delete",
+      "rva": "0x2FA980",
+      "category": "SDK function guard",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "554889E541574156",
+      "sigSource": "SDK function guard",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "vm_map_protect",
+      "rva": "0x2FCCE0",
+      "category": "SDK function guard",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "554889E541574156",
+      "sigSource": "SDK function guard",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "vm_map_findspace",
+      "rva": "0x2FAF40",
+      "category": "SDK function guard",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "554889E541574156",
+      "sigSource": "SDK function guard",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "vm_map_insert",
+      "rva": "0x2F9080",
+      "category": "SDK function guard",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "554889E541574156",
+      "sigSource": "SDK function guard",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "vm_map_lock",
+      "rva": "0x2F7D30",
+      "category": "SDK function guard",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "554889E5535080BF",
+      "sigSource": "SDK function guard",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "vm_map_unlock",
+      "rva": "0x2F7DA0",
+      "category": "SDK function guard",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "554889E541565380",
+      "sigSource": "SDK function guard",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "site_00",
+      "rva": "0x2BDB5D",
+      "category": "Installer patch window",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "76174989EA4983C2",
+      "sigSource": "Installer patch window",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "site_01",
+      "rva": "0x3B3BA0",
+      "category": "Installer patch window",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "554889E5E8C7C906",
+      "sigSource": "Installer patch window",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "site_02",
+      "rva": "0x3B3C10",
+      "category": "Installer patch window",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "554889E5488B4768",
+      "sigSource": "Installer patch window",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "site_03",
+      "rva": "0x3B3C30",
+      "category": "Installer patch window",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "554889E5F6471704",
+      "sigSource": "Installer patch window",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "site_04",
+      "rva": "0x76C9B0",
+      "category": "Installer patch window",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "554889E541565380",
+      "sigSource": "Installer patch window",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "site_05",
+      "rva": "0x1FCC01",
+      "category": "Installer patch window",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "E8BA63440085C00F",
+      "sigSource": "Installer patch window",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "site_06",
+      "rva": "0x2FCEBC",
+      "category": "Installer patch window",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "0F85AD070000498B",
+      "sigSource": "Installer patch window",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "site_07",
+      "rva": "0x367765",
+      "category": "Installer patch window",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "771C48B836100000",
+      "sigSource": "Installer patch window",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "site_08",
+      "rva": "0x367C51",
+      "category": "Installer patch window",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "488B41084489C348",
+      "sigSource": "Installer patch window",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "site_09",
+      "rva": "0x478B94",
+      "category": "Installer patch window",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "740B49C744243800",
+      "sigSource": "Installer patch window",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "site_10",
+      "rva": "0x4669EC",
+      "category": "Installer patch window",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "030000006A00506A",
+      "sigSource": "Installer patch window",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "site_11",
+      "rva": "0x4669F4",
+      "category": "Installer patch window",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "03E88626E9FF4883",
+      "sigSource": "Installer patch window",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "site_12",
+      "rva": "0x2BDD97",
+      "category": "Installer patch window",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "774748B8FFFFFFFF",
+      "sigSource": "Installer patch window",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "site_13",
+      "rva": "0x2BDCA2",
+      "category": "Installer patch window",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "775C48B8FFFFFFFF",
+      "sigSource": "Installer patch window",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "site_14",
+      "rva": "0x30492E",
+      "category": "Installer patch window",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "0F8598000000E847",
+      "sigSource": "Installer patch window",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "site_15",
+      "rva": "0x135A55",
+      "category": "Installer patch window",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "E8C6B01A00488B45",
+      "sigSource": "Installer patch window",
+      "confidence": "signature-reference"
+    },
+    {
+      "name": "site_16",
+      "rva": "0x2A526A",
+      "category": "Installer patch window",
+      "scope": "kernel",
+      "source": "14.02 ELF audit reference",
+      "signature": "E8B1B803004189DF",
+      "sigSource": "Installer patch window",
+      "confidence": "signature-reference"
+    }
+  ]
+}
